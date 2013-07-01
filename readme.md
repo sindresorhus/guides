@@ -1,11 +1,16 @@
 # Guides
 
-> A collection of useful guides.
+> A collection of succinct guides
 
 
 ## Collection
 
 - [Set environment variables](set-environment-variables.md)
+
+
+## Contribute
+
+I'm happy to accept requests in the issue tracker, improvements to the content, and additional guides.
 
 
 ## License
