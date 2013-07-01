@@ -11,7 +11,7 @@
 
 3. You can add an environment variable using the following syntax `export FOO='bar'` in the opened file. This will add the environment variable `FOO` with the value of `bar`.
 
-*The tilde character `~` means your home folder. On my Mac `~` would translate into `/Users/sindresorhus`.*
+*The tilde character `~` means your home folder. On my Mac `~` would translate into `/Users/sindresorhus`, on Linux distros `~` would translate into `/home/sindresorhus`.*
 
 
 ## Windows
