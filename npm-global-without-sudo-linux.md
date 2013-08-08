@@ -1,9 +1,10 @@
-# Install packages globally on Linux without sudo
+# Install npm packages globally on Linux without sudo
 
-npm installs packages locally within each of your projects. Additionally, you
-can also install packages globally (e.g. `-g` switch of npm). However
+npm installs packages locally within each of your projects by default. You
+can also install packages globally (e.g. `npm install -g <package>`). However
 the downside of this is that you need to be root (or use `sudo`) to be
-able to install globally. 
+able to install globally.
+
 Here is a way to install packages globally for a given user.
 
 1. Create a directory for your global packages
@@ -34,8 +35,7 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 # Unset manpath so we can inherit from /etc/manpath via the `manpath`
 # command
-unset MANPATH  # delete if you already modified MANPATH elsewhere in
-your config
+unset MANPATH  # delete if you already modified MANPATH elsewhere in your config
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
