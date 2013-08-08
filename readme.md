@@ -6,6 +6,14 @@
 ## Collection
 
 - [Set environment variables](set-environment-variables.md)
+- [Install npm packages globally on Linux without sudo](npm-global-without-sudo-linux.md)
+
+
+## Authors
+
+[Sindre Sorhus](http://sindresorhus.com),
+[Frederick Ros](https://github.com/sleeper),
+You?
 
 
 ## Contribute
