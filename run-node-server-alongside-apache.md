@@ -26,13 +26,9 @@ Install libxml if it is not already installed:
 apt-get install libxml2-dev
 ```
 
-Load the modules in apache2.conf file:
+Load the modules in apache2.conf file (thanks to @kevva for this):
 ```
-LoadModule  proxy_module         /usr/lib/apache2/modules/mod_proxy.so
-LoadModule  proxy_http_module    /usr/lib/apache2/modules/mod_proxy_http.so
-LoadModule  headers_module       /usr/lib/apache2/modules/mod_headers.so
-LoadModule  deflate_module       /usr/lib/apache2/modules/mod_deflate.so
-LoadFile    /usr/lib/libxml2.so
+sudo a2enmod proxy_module proxy_http_module headers_module deflate_module
 ```
 
 Now, hopfully you didn't have to pull your hair out tring to those Apache modules. I lost quite a bit of time to it initially, but unfamiliar things always seem to sap the most time.
