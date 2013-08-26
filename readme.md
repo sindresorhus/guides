@@ -15,7 +15,7 @@
 [Sindre Sorhus](http://sindresorhus.com),
 [Frederick Ros](https://github.com/sleeper),
 [Adam Brewer](https://github.com/adamcbrewer)
-[Kevin Kevin Mårtensson](https://github.com/kevva)
+[Kevin Mårtensson](https://github.com/kevva)
 You?
 
 
