@@ -7,15 +7,15 @@
 
 - [Set environment variables](set-environment-variables.md)
 - [Install npm packages globally on Linux without sudo](npm-global-without-sudo-linux.md)
-- [Run a Node.js server alongside apache]( run-node-server-alongside-apache.md)
+- [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
 
 
 ## Authors
 
 [Sindre Sorhus](http://sindresorhus.com),
 [Frederick Ros](https://github.com/sleeper),
-[Adam Brewer](https://github.com/adamcbrewer)
-[Kevin Mårtensson](https://github.com/kevva)
+[Adam Brewer](https://github.com/adamcbrewer),
+[Kevin Mårtensson](https://github.com/kevva),
 You?
 
 

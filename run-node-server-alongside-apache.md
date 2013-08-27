@@ -1,8 +1,9 @@
-# Run A Node App Sever Alongside Apache
+# Run a Node.js server alongside Apache
 
 This guide shows how to run a Node.js daemon process alongside Apache, with a nice, clean URL.
 
-The best way to build with Node.js is using a dedicated hosting provider, but sometimes you just want to tinker. A node daemon can easlity be run on a different port to Apache, but nobody likes a dirty URL.
+The best way to develop with Node.js is using a dedicated hosting provider, but sometimes you just want to tinker. A node daemon can easily be run on a different port to Apache, but nobody likes a dirty URL.
+
 
 # Linux (Ubuntu)
 
@@ -14,28 +15,26 @@ If you're fortunate and the `proxy_http` module is in the `mods-enabled` directo
 a2enmod proxy_http
 ```
 
-Otherwise the following steps should be the following...
+Otherwise follow these steps:
 
-Install reverse_proxy module:
+Install `reverse_proxy` module:
 ```
 sudo apt-get install libapache2-mod-proxy-html
 ```
 
-Install libxml if it is not already installed:
+Install libxml if it's not already installed:
 ```
 apt-get install libxml2-dev
 ```
 
-Load the modules in apache2.conf file (thanks to @kevva for this):
+Load the modules in the apache2.conf file:
 ```
 sudo a2enmod proxy_module proxy_http_module headers_module deflate_module
 ```
 
-Now, hopfully you didn't have to pull your hair out tring to those Apache modules. I lost quite a bit of time to it initially, but unfamiliar things always seem to sap the most time.
+You can now add the following rules to your Apache virtualhost config, which can found in `/etc/apache2/sites-available/your-node-virtualhost-domain.com`:
 
-With the first part behind, we should be good to go adding the following rules to our Apache virtualhost config, which should found in `/etc/apache2/sites-available/your-node-virtualhost-domain.com`
-
-``` xml
+```xml
 <VirtualHost *:80>
 	# Admin email, Server Name (domain name), and any aliases
 	ServerAdmin your@email.com
@@ -78,13 +77,13 @@ Apache should now be doing its thing, so all that's left it to run our Node app:
 node /path/to/your/app.js
 ```
 
-However, if you're connected remotely via ssh, when you log out your `node` process is going to be killed. So we need to make sure the process is run as a daemon process:
+However, if you're connected remotely via ssh, when you log out your `node` process it's going to be killed. So we need to make sure the process is run as a daemon process:
 
 ```
 node /path/to/your/app.js >/dev/null 2>&1 &
 ```
 
-I'll admit I stumbled upon that command somewhere in Stack Overflow. I can't say it's the most correct way to do it, but it's essentially running the node process silently, outputting no errors, and pushing it to a background task. If we choose to logout a this point it should continue to run as long as there aren't any errors. I would recommend running [Remy Sharp's nodemon](https://github.com/remy/nodemon), but that's your call.
+I'll admit I stumbled upon that command somewhere in Stack Overflow. I can't say it's the most correct way to do it, but it's essentially running the node process silently, outputting no errors, and pushing it to a background task. If we choose to logout at this point it should continue to run as long as there aren't any errors. I would recommend running [Remy Sharp's nodemon](https://github.com/remy/nodemon), but that's your call.
 
 If you've gotten this to work you're more than likely going to want to do it many more times. I [created a gist](https://gist.github.com/adamcbrewer/6060840) just to refer to when I need to set up a new domain virtualhost and run a new background task.
 
