@@ -37,6 +37,14 @@
 
 ## Windows
 
+### Windows 7 and 8
+
+1. Open `cmd.exe`
+
+2. Type `setx FOO bar`. This will add an environment variable named FOO with the value of bar.
+
+### Alternative (without command line and for older Windows)
+
 1. Right-click on the Computer icon on your desktop or start-menu and choose the Properties menu item.
 
 2. In the new `System` window click on `Advanced system settings`.
