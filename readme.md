@@ -6,7 +6,8 @@
 ## Collection
 
 - [Set environment variables](set-environment-variables.md)
-- [Install npm packages globally on Linux without sudo](npm-global-without-sudo-linux.md)
+- [How not to `rm` yourself](how-not-to-rm-yourself.md)
+- [Install npm packages globally without sudo](npm-global-without-sudo-linux.md) *(Linux)*
 - [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
 
 
