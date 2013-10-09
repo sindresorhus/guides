@@ -31,13 +31,13 @@ Use [`recycle`](http://techie-buzz.com/softwares/recycle-files-from-windows-comm
 
 Even though you don't use `rm` directly, external scripts most likely will. There are some things you can do to safeguard this:
 
-- Alias `rm` to its interactive mode, which will force you to step through what it's trying to delete: `alias rm=rm -i`
+- Alias `rm` to its interactive mode, which will force you to step through what it's trying to delete: `alias rm="rm -i"`
 
 - Install `coreutils` which includes a newer version of `rm` with the flag `--preserve-root` which is enabled by default and will prevent you from removing root.
 	OS X: `brew install coreutils`
 	Linux: `apt-get install coreutils`
 
-	With this version of `rm` you can also choose to switch from `alias rm=rm -i` to `alias rm=rm -I` which is similar:
+	With this version of `rm` you can also choose to switch from `alias rm="rm -i"` to `alias rm="rm -I"` which is similar:
 
 	> -I   prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes.
 
