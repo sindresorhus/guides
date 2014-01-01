@@ -41,7 +41,7 @@ Even though you don't use `rm` directly, external scripts most likely will. Ther
 
 	> -I   prompt once before removing more than three files, or when removing recursively. Less intrusive than -i, while still giving protection against most mistakes.
 
-- Install [`safe-rm`](http://www.safe-rm.org.nz) which will let you set off-limits directories.
+- Install [`safe-rm`](https://launchpad.net/safe-rm) which will let you set off-limits directories.
 
 - ZSH users can also do the following:
 	- Put `unsetopt RM_STAR_SILENT` in your .zshrc, which will make it ask you before executing `rm` with a star `rm folder/*`.
