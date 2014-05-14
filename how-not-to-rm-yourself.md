@@ -2,29 +2,20 @@
 
 The [`rm`](http://en.wikipedia.org/wiki/Rm_\(Unix\)) command is inherently dangerous and should not be used directly. It can at worst let you accidentally remove **everything**. Here's how you can protect *you* from yourself.
 
-## Use `trash`
 
-The `trash` command-line tool will move stuff to the trash instead of permanently deleting it. You should not alias `rm` to `trash` as it will break external scripts relaying on the behavior of `rm`. Instead use it directly: `trash image.jpg`.
+## Use [`trash`](https://github.com/sindresorhus/trash)
 
-#### OS X
+The `trash` command-line app will move stuff to the trash instead of permanently deleting it. You should not alias `rm` to `trash` as it will break external scripts relying on the behavior of `rm`. Instead use it directly:
 
-Use [`trash`](http://hasseg.org/trash/) instead of `rm`:
-
-```
-brew install trash
+```sh
+$ npm install --global trash
 ```
 
-#### Linux
-
-Use [`trash-cli`](https://github.com/andreafrancia/trash-cli) instead of `rm`:
-
-```
-apt-get install trash-cli
+```sh
+$ trash unicorn.png rainbow.png
 ```
 
-#### Windows
-
-Use [`recycle`](http://techie-buzz.com/softwares/recycle-files-from-windows-command-prompt.html).
+*Works on OS X, Linux, Windows. Requires [Node.js](http://nodejs.org).*
 
 
 ## Safeguard `rm`
