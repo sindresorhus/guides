@@ -38,3 +38,5 @@ Even though you don't use `rm` directly, external scripts most likely will. Ther
 	- Put `unsetopt RM_STAR_SILENT` in your .zshrc, which will make it ask you before executing `rm` with a star `rm folder/*`.
 
 	- Put `setopt RM_STAR_WAIT` in your .zshrc, which will make it wait 10 seconds until executing `rm` with a star `rm folder/*`.
+
+- **Always backup your system.**
