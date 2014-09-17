@@ -20,7 +20,7 @@ NPM_PACKAGES="$HOME/.npm-packages"
 3. Indicate to `npm` where to store your globally installed package. In
    your `$HOME/.npmrc` file add:
 ```
-prefix="$HOME/.npm-packages"
+prefix=${HOME}/.npm-packages
 ```
 
 4. Ensure `node` will find them. Add the following to your
