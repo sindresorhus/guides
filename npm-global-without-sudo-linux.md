@@ -45,3 +45,5 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
 Inspired from this [answer on StackOverflow](http://stackoverflow.com/a/13021677).
+
+There is a script [https://github.com/glenpike/npm-g_nosudo] to automate fixing existing global npm package installations by moving these to the ~/.npm-packages directory and setting the appropriate variables above.
