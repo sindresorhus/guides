@@ -45,3 +45,5 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
 Inspired from this [answer on StackOverflow](http://stackoverflow.com/a/13021677).
+
+Check out [npm-g_nosudo](https://github.com/glenpike/npm-g_nosudo) for doing the above steps automagically.
