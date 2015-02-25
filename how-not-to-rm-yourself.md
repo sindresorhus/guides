@@ -22,7 +22,7 @@ $ trash unicorn.png rainbow.png
 
 Even though you don't use `rm` directly, external scripts most likely will. There are some things you can do to safeguard this:
 
-- Alias `rm` to its interactive mode `rm -i` and set `shopt -s expand_aliases` in your `$BASH_ENV`. This will force you to step through what it's trying to delete.
+- Alias `rm` to its interactive mode `rm -i` and set `shopt -s expand_aliases` and source your `.bashrc` in `$BASH_ENV`. This will force you to step through what it's trying to delete.
 
 - Install `coreutils` which includes a newer version of `rm` with the flag `--preserve-root` which is enabled by default and will prevent you from removing root.
 	OS X: `brew install coreutils`
