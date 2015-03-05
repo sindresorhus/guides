@@ -1,6 +1,6 @@
-# Install npm packages globally without sudo on OS X and Linux
+# Install `npm` packages globally without sudo on OS X and Linux
 
-npm installs packages locally within your projects by default. You can also install packages globally (e.g. `npm install -g <package>`) (useful for command-line apps). However the downside of this is that you need to be root (or use `sudo`) to be able to install globally.
+`npm` installs packages locally within your projects by default. You can also install packages globally (e.g. `npm install -g <package>`) (useful for command-line apps). However the downside of this is that you need to be root (or use `sudo`) to be able to install globally.
 
 Here is a way to install packages globally for a given user.
 
@@ -40,7 +40,7 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 -
 
-Check out [npm-g_nosudo](https://github.com/glenpike/npm-g_nosudo) for doing the above steps automagically
+Check out [`npm-g_nosudo`](https://github.com/glenpike/npm-g_nosudo) for doing the above steps automagically
 
 -
 
@@ -49,3 +49,8 @@ NOTE: If you are running OS X, the `.bashrc` file may not yet exist, and the ter
 ```sh
 source ~/.bashrc
 ```
+
+---
+
+See also: `npm`'s documentation on
+["Fixing `npm` permissions"](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
