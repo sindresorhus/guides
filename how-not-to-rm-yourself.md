@@ -42,7 +42,7 @@ Even though you don't use `rm` directly, external scripts most likely will. Ther
 
 - Install `coreutils` which includes a newer version of `rm` with the flag `--preserve-root` which is enabled by default and will prevent you from removing root.
 	OS X: `brew install coreutils`
-	Linux: `apt-get install coreutils`
+	Linux: *Included by default.*
 
 	With this version of `rm` you can also choose to switch from `alias rm='rm -i'` to `alias rm='rm -I'` which is similar:
 
