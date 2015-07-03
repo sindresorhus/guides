@@ -22,7 +22,7 @@ $ trash unicorn.png rainbow.png
 
 Even though you don't use `rm` directly, external scripts most likely will. There are some things you can do to safeguard this:
 
-- Alias `rm` to its interactive mode `rm -i`:
+- Alias `rm` to its interactive mode `rm -i`. Just doing this step is not enough as `-f` overrides `-i`.
 
 	If you only want to alias `rm` in your interactive shell (and not in scripts), just add `alias rm='rm -i'` to your `.bashrc` or `.zshrc`.
 
