@@ -3,12 +3,12 @@
 The [`rm`](http://en.wikipedia.org/wiki/Rm_\(Unix\)) command is inherently dangerous and should not be used directly. It can at worst let you accidentally remove **everything**. Here's how you can protect *you* from yourself.
 
 
-## Use [`trash`](https://github.com/sindresorhus/trash)
+## Use [`trash-cli`](https://github.com/sindresorhus/trash-cli)
 
-The `trash` command-line app will move stuff to the trash instead of permanently deleting it. You should not alias `rm` to `trash` as it will break external scripts relying on the behavior of `rm`. Instead use it directly:
+The `trash-cli` command-line app will move stuff to the trash instead of permanently deleting it. You should not alias `rm` to `trash` as it will break external scripts relying on the behavior of `rm`. Instead use it directly:
 
 ```
-$ npm install --global trash
+$ npm install --global trash-cli
 ```
 
 ```
