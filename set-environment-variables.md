@@ -51,6 +51,20 @@
 
 3. In the new `System Properties` window click the `Advanced` tab and then the `Environment Variables...` button.
 
+> *To avoid having to go through this arcane navigation, you can also create a desktop shortcut with target command of* **`rundll32.exe sysdm.cpl,EditEnvironmentVariables`**.  (Or just enter this command in the Windows Run box \[Win+R\].)
+
 4. Click the first `New...` button.
 
 5. In the `New User Variable` box you can add an environment variable name and value.
+
+### Use one of these small, free tools
+
+1. [NVM#](http://www.codeproject.com/Articles/1045296/NVMSharp) - For Windows 10 only, but supports the new environment variable extensions for Windows 10.
+
+2. [Path-Manager](http://sourceforge.net/projects/pathtool/) - Not limited to only setting `PATH` environment variable, but any environment variable.  Includes validation of path names.
+
+3. [Rapid Environment Editor (RapidEE)](http://www.rapidee.com/en/about) - Comprehensive editor that includes display of read-only variables set by Windows.
+
+4. [Windows Environment Variables Editor](http://eveditor.com/) - Nice, simple GUI layout reminiscient of Microsoft's GUI standards.  Includes support for backing up and restoring environment variable "sets".
+
+5. [Windows Environment Variables Manager (EnvMan)](http://sourceforge.net/projects/env-man/) - Nice separation of user and system environment varibles and support for rearranging sequence of paths in `PATH` environment variable.
