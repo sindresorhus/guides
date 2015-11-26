@@ -4,38 +4,28 @@
 
 Here is a way to install packages globally for a given user.
 
-###### 1. Create a directory for your global packages
+###### 1. Create a directory for globally packages
 
 ```sh
 mkdir "${HOME}/.npm-packages"
 ```
 
-###### 2. Reference this directory for future usage in your `.bashrc`/`.zshrc`:
-
-```sh
-NPM_PACKAGES="${HOME}/.npm-packages"
-```
-
-###### 3. Indicate to `npm` where to store your globally installed package. In your `$HOME/.npmrc` file add:
+###### 2. Indicate to `npm` where to store globally installed packages. In your `~/.npmrc` file add:
 
 ```sh
 prefix=${HOME}/.npm-packages
 ```
 
-###### 4. Ensure `node` will find them. Add the following to your `.bashrc`/`.zshrc`:
+###### 3. Ensure `npm` will find installed binaries and man pages. Add the following to your `.bashrc`/`.zshrc`:
 
 ```sh
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-```
+NPM_PACKAGES="${HOME}/.npm-packages"
 
-###### 5. Ensure you'll find installed binaries and man pages. Add the following to your `.bashrc`/`.zshrc`:
-
-```sh
 PATH="$NPM_PACKAGES/bin:$PATH"
-# Unset manpath so we can inherit from /etc/manpath via the `manpath`
-# command
+
+# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
 -
