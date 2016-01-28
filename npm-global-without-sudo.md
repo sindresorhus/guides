@@ -49,3 +49,7 @@ curl -L https://www.npmjs.org/install.sh | sh
 ---
 See also: `npm`'s documentation on
 ["Fixing `npm` permissions"](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
+
+---
+See also: how to 
+[completely uninstall Node.js from Mac OS X](http://benznext.com/completely-uninstall-node-js-from-mac-os-x/)
