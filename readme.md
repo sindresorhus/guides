@@ -10,6 +10,7 @@
 - [Install npm packages globally without sudo](npm-global-without-sudo.md) *(OS X & Linux)*
 - [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
 - [Launch app on startup](launch-app-on-startup-osx.md) *(OS X)*
+- [Add New Home User Bin Directory in Mac OS X](add-new-user-bin-directory-in-mac-os-x.md) *(OS X)*
 
 
 ## Authors
@@ -18,6 +19,7 @@
 [Frederick Ros](https://github.com/sleeper),
 [Adam Brewer](https://github.com/adamcbrewer),
 [Kevin Mårtensson](https://github.com/kevva),
+[Ronni Chidekel](https://github.com/ronidc),
 You?
 
 
