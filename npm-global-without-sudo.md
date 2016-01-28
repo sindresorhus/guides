@@ -41,8 +41,10 @@ source ~/.bashrc
 ```
 
 ---
-This gets and installs the latest npm, which is 3.5.3 at the time of this writing. 
-```curl -L https://www.npmjs.org/install.sh | sh```
+###### 4. Get and install the latest npm, which is 3.5.3 at the time of this writing. 
+```
+curl -L https://www.npmjs.org/install.sh | sh
+```
 
 ---
 See also: `npm`'s documentation on
