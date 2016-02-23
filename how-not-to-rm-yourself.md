@@ -5,7 +5,7 @@ The [`rm`](http://en.wikipedia.org/wiki/Rm_\(Unix\)) command is inherently dange
 
 ## Use [`trash-cli`](https://github.com/sindresorhus/trash-cli)
 
-The `trash-cli` command-line app will move stuff to the trash instead of permanently deleting it. You should not alias `rm` to `trash` as it will break external scripts relying on the behavior of `rm`. Instead use it directly:
+The `trash-cli` command-line app will move stuff to the trash instead of permanently deleting it:
 
 ```
 $ npm install --global trash-cli
