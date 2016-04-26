@@ -10,6 +10,7 @@
 - [Install npm packages globally without sudo](npm-global-without-sudo.md) *(OS X & Linux)*
 - [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
 - [Launch app on startup](launch-app-on-startup-osx.md) *(OS X)*
+- [Use npm over corporate proxy](use-npm-over-proxy.md)
 
 
 ## Authors
