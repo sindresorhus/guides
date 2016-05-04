@@ -15,11 +15,11 @@
 
 
 ## Authors
-[Hedcler Morais](http://github.com/hedcler),
 [Sindre Sorhus](http://sindresorhus.com),
 [Frederick Ros](https://github.com/sleeper),
 [Adam Brewer](https://github.com/adamcbrewer),
 [Kevin Mårtensson](https://github.com/kevva),
+[Hedcler Morais](http://github.com/hedcler),
 You?
 
 
