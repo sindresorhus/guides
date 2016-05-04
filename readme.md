@@ -10,14 +10,16 @@
 - [Install npm packages globally without sudo](npm-global-without-sudo.md) *(OS X & Linux)*
 - [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
 - [Launch app on startup](launch-app-on-startup-osx.md) *(OS X)*
+- [Use npm over corporate proxy](npm-over-proxy.md) *(OS X & Linux)*
+- [Run docker commands without sudo](docker_without_sudo.md) *(Linux)*
 
 
 ## Authors
-
 [Sindre Sorhus](http://sindresorhus.com),
 [Frederick Ros](https://github.com/sleeper),
 [Adam Brewer](https://github.com/adamcbrewer),
 [Kevin Mårtensson](https://github.com/kevva),
+[Hedcler Morais](http://github.com/hedcler),
 You?
 
 
