@@ -5,7 +5,7 @@
 > They are part of the operating environment in which a process runs. For example, a running process can query the value of the TEMP environment variable to discover a suitable location to store temporary files, or the HOME or USERPROFILE variable to find the directory structure owned by the user running the process.
 
 
-## OS X
+## macOS
 
 1. Find out if you're using Bash or ZSH by running the command `echo $SHELL` in your Terminal.
 

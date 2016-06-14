@@ -7,10 +7,10 @@
 
 - [Set environment variables](set-environment-variables.md)
 - [How not to `rm` yourself](how-not-to-rm-yourself.md)
-- [Install npm packages globally without sudo](npm-global-without-sudo.md) *(OS X & Linux)*
+- [Install npm packages globally without sudo](npm-global-without-sudo.md) *(macOS & Linux)*
 - [Run a Node.js server alongside Apache](run-node-server-alongside-apache.md) *(Linux)*
-- [Launch app on startup](launch-app-on-startup-osx.md) *(OS X)*
-- [Use npm through a corporate proxy](npm-proxy.md) *(OS X & Linux)*
+- [Launch app on startup](launch-app-on-startup-macos.md) *(macOS)*
+- [Use npm through a corporate proxy](npm-proxy.md) *(macOS & Linux)*
 - [Run Docker commands without sudo](docker-without-sudo.md) *(Linux)*
 
 

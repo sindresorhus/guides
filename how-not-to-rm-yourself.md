@@ -15,7 +15,7 @@ $ npm install --global trash-cli
 $ trash unicorn.png rainbow.png
 ```
 
-*Works on OS X, Linux, Windows. Requires [Node.js](http://nodejs.org).*
+*Works on macOS, Linux, Windows. Requires [Node.js](http://nodejs.org).*
 
 
 ## Safeguard `rm`
@@ -41,7 +41,7 @@ Even though you don't use `rm` directly, external scripts most likely will. Ther
 	- Finally, in your `.zshrc` add `source ~/.common_profile` and `export BASH_ENV='~/.bashenv'`. Your `.common_profile`, `.bashenv`, `.zshenv` and `.zshrc` should end up looking like [this](https://gist.github.com/andbroby/958c6b4259290d4c884c).
 
 - Install `coreutils` which includes a newer version of `rm` with the flag `--preserve-root` which is enabled by default and will prevent you from removing root.
-	OS X: `brew install coreutils`
+	macOS: `brew install coreutils`
 	Linux: *Included by default.*
 
 	With this version of `rm` you can also choose to switch from `alias rm='rm -i'` to `alias rm='rm -I'` which is similar:
