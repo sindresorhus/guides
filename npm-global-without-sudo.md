@@ -4,7 +4,7 @@
 
 Here is a way to install packages globally for a given user.
 
-###### 1. Create a directory for globally packages
+###### 1. Create a directory for global packages
 
 ```sh
 mkdir "${HOME}/.npm-packages"
