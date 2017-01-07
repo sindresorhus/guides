@@ -20,6 +20,8 @@ prefix=${HOME}/.npm-packages
 
 ```sh
 NPM_PACKAGES="${HOME}/.npm-packages"
+# add NPM_PACKAGES to NODE_PATH
+export NODE_PATH="$NODE_PATH:$NPM_PACKAGES/lib/node_modules"
 
 PATH="$NPM_PACKAGES/bin:$PATH"
 
