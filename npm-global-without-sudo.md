@@ -32,7 +32,7 @@ For the Fish shell:
 
 ```sh
 set NPM_PACKAGES "$HOME/.npm-packages"
-set PATH $NPM_PACKAGES $PATH
+set PATH "$NPM_PACKAGES/bin" $PATH
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 set --erase MANPATH # delete if you already modified MANPATH elsewhere in your config
