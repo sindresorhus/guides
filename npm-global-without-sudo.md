@@ -28,6 +28,14 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
+###### 4. Ensure executables npm installs are accessable from the command line
+
+Make sure you add the .npm-packages/bin folder to your path using the following command
+
+```
+export PATH="{path}/.npm-packages/bin:$PATH"
+```
+
 ---
 
 Check out [`npm-g_nosudo`](https://github.com/glenpike/npm-g_nosudo) for doing the above steps automagically
