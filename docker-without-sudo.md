@@ -25,7 +25,7 @@ If you are on Ubuntu 14.04-15.10, use `docker.io` instead:
 ```console
 $ sudo service docker.io restart
 ```
-##### 4. Logout from you session, login again and try (without sudo)
+##### 4. Logout from your session, login again and try (without sudo)
 ```console
 $ docker -v
 ```
