@@ -12,7 +12,7 @@
 - [Launch app on startup](launch-app-on-startup-macos.md) *(macOS)*
 - [Use npm through a corporate proxy](npm-proxy.md) *(macOS & Linux)*
 - [Run Docker commands without sudo](docker-without-sudo.md) *(Linux)*
-
+- [Run npx without errors](npx-windows.md) *(Windows)*
 
 ## Authors
 
@@ -21,6 +21,7 @@
 [Adam Brewer](https://github.com/adamcbrewer),
 [Kevin Mårtensson](https://github.com/kevva),
 [Hedcler Morais](https://github.com/hedcler),
+[Thiago Delgado Pinto](https://github.com/thiagodp),
 You?
 
 
