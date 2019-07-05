@@ -33,7 +33,7 @@ Even though you don't use `rm` directly, external scripts most likely will. Ther
 	- Create a file called `.bashenv` in your home directory with `shopt -s expand_aliases` and `source .bashrc`.
 	- In your `.bashrc`, add `export BASH_ENV='~/.bashenv'`.
 
-	**zsh**:  
+	**zsh**:
 	If you use zsh and want `rm` to be aliased in bash scripts, zsh scripts *and* your own interactive z shell, we have to jump through some more hoops:
 	- Create a file called `.common_profile` in your home directory with `alias rm='rm -i'`
 	- Create a file called `.bashenv` in your home directory with `source ~/.common_profile` and `shopt -s expand_aliases`.

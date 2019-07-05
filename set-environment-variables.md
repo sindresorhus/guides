@@ -51,7 +51,7 @@
 
 3. In the new `System Properties` window click the `Advanced` tab and then the `Environment Variables...` button.
 
-> *To avoid having to go through this arcane navigation, you can also create a desktop shortcut with target command of `rundll32.exe sysdm.cpl,EditEnvironmentVariables`.  
+> *To avoid having to go through this arcane navigation, you can also create a desktop shortcut with target command of `rundll32.exe sysdm.cpl,EditEnvironmentVariables`.
 > (Or just enter this command in the Windows Run box <kbd>Win</kbd> <kbd>R</kbd>.)*
 
 4. Click the first `New...` button.

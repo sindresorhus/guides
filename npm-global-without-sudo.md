@@ -10,13 +10,15 @@ Here is a way to install packages globally for a given user.
 mkdir "${HOME}/.npm-packages"
 ```
 
-###### 2. Indicate to `npm` where to store globally installed packages. In your `~/.npmrc` file add:
+###### 2. Tell `npm` where to store globally installed packages
 
 ```sh
-prefix=${HOME}/.npm-packages
+npm config set prefix "${HOME}/.npm-packages"
 ```
 
-###### 3. Ensure `npm` will find installed binaries and man pages. Add the following to your `.bashrc`/`.zshrc`:
+###### 3. Ensure `npm` will find installed binaries and man pages
+
+Add the following to your `.bashrc`/`.zshrc`:
 
 ```sh
 NPM_PACKAGES="${HOME}/.npm-packages"
