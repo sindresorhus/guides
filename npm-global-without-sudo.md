@@ -30,6 +30,17 @@ unset MANPATH # delete if you already modified MANPATH elsewhere in your config
 export MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 ```
 
+If you are on `fish` within `~/.config/fish/config.fish`  
+
+```sh
+ set NPM_PACKAGES "$HOME/.npm-packages"                                                                                                                                                        
+ set PATH $NPM_PACKAGES/bin $PATH                                                                                                                                                              
+                                                                                                                                                                                               
+ # Unset manpath so we can inherit from /etc/manpath via the `manpath` command                                                                                                                 
+ set -e MANPATH                                                                                                                                                                                
+ set MANPATH $NPM_PACKAGES/share/man $MANPATH     
+```
+
 ---
 
 Check out [`npm-g_nosudo`](https://github.com/glenpike/npm-g_nosudo) for doing the above steps automagically
