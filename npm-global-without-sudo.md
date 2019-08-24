@@ -23,7 +23,7 @@ Add the following to your `.bashrc`/`.zshrc`:
 ```sh
 NPM_PACKAGES="${HOME}/.npm-packages"
 
-export PATH="$NPM_PACKAGES/bin:$PATH"
+export PATH="$PATH:$NPM_PACKAGES/bin"
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command
 unset MANPATH # delete if you already modified MANPATH elsewhere in your config
