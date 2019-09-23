@@ -26,7 +26,7 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
 # Preserve MANPATH if you already defined it somewhere in your config.
-# Otherwise fallback to `manpath` so we can inherit from /etc/manpath.
+# Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 ```
 
