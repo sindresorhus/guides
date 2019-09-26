@@ -39,7 +39,8 @@ set PATH $NPM_PACKAGES/bin $PATH
 
 set MANPATH $NPM_PACKAGES/share/man $MANPATH  
 ```
-If by mistake you have erased your MANPATH, you can restore it with `set -Ux MANPATH (manpath -g) $MANPATH`, do not put this command in your config.sh
+
+If you have erased your MANPATH by mistake, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
 
 ---
 
