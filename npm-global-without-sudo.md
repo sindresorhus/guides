@@ -37,10 +37,9 @@ set NPM_PACKAGES "$HOME/.npm-packages"
 
 set PATH $NPM_PACKAGES/bin $PATH
 
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-set -e MANPATH
 set MANPATH $NPM_PACKAGES/share/man $MANPATH  
 ```
+If by mistake you have erased your MANPATH, you can restore it with `set -Ux MANPATH (manpath -g) $MANPATH`, do not put this command in your config.sh
 
 ---
 
