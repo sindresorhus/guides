@@ -37,10 +37,10 @@ set NPM_PACKAGES "$HOME/.npm-packages"
 
 set PATH $NPM_PACKAGES/bin $PATH
 
-# Unset manpath so we can inherit from /etc/manpath via the `manpath` command
-set -e MANPATH
 set MANPATH $NPM_PACKAGES/share/man $MANPATH  
 ```
+
+If you have erased your MANPATH by mistake, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
 
 ---
 
