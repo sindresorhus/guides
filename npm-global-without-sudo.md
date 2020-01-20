@@ -21,13 +21,24 @@ npm config set prefix "${HOME}/.npm-packages"
 Add the following to your `.bashrc`/`.zshrc`:
 
 ```sh
-NPM_PACKAGES="${HOME}/.npm-packages"
+NPM_PACKAGES="${XDG_DATA_HOME}/npm-packages"
+if ! [ -d "$NPM_PACKAGES" ] && command -v npm >/dev/null 2>&1; then
+  npm config set prefix "$NPM_PACKAGES"
+  mkdir --parents -m 0700 "$NPM_PACKAGES"
+fi
 
-export PATH="$PATH:$NPM_PACKAGES/bin"
+if [[ ":${PATH}:" != *":${NPM_PACKAGES}/bin:"* ]]; then
+  export PATH="${PATH:+"${PATH}:"}${NPM_PACKAGES}/bin"
+fi
 
 # Preserve MANPATH if you already defined it somewhere in your config.
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`.
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+[ -z "$MANPATH" ] && export MANPATH="$(manpath)"
+if [[ ":${MANPATH}:" != *":${NPM_PACKAGES}/share/man:"* ]]; then
+  export MANPATH="${MANPATH:+"${MANPATH}:"}${NPM_PACKAGES}/share/man"
+fi
+
+unset NPM_PACKAGES
 ```
 
 If you're using `fish`, add the following to `~/.config/fish/config.fish`:
