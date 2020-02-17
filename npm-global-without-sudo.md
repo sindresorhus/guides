@@ -24,9 +24,7 @@ Add the following to your `.bashrc`/`.zshrc`:
 NPM_PACKAGES="${XDG_DATA_HOME}/npm-packages"
 if ! [ -d "$NPM_PACKAGES" ] && command -v npm >/dev/null 2>&1; then
   npm config set prefix "$NPM_PACKAGES"
-  mkdir --parents --mode=0700 "$NPM_PACKAGES"
   npm config set cache "${XDG_CACHE_HOME}/npm"
-  mkdir --parents --mode=0700 "${XDG_CACHE_HOME}/npm"
 fi
 if [[ ":${PATH}:" != *":${NPM_PACKAGES}/bin:"* ]]; then
   export PATH="${PATH:+"${PATH}:"}${NPM_PACKAGES}/bin"
