@@ -25,7 +25,7 @@ export XDG_DATA_HOME=${HOME}/.local/share
 test -d "$XDG_DATA_HOME"   || mkdir --parents --mode=0700 "$XDG_DATA_HOME"
 NPM_PACKAGES="${XDG_DATA_HOME}/npm-packages"
 
-if ! [ -d "$NPM_PACKAGES" ] && command -v npm >/dev/null 2>&1; then
+if ! [ -d "$NPM_PACKAGES" ]; then
 	npm config set prefix "$NPM_PACKAGES"
 	npm config set cache "${XDG_CACHE_HOME}/npm"
 fi
