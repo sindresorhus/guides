@@ -21,6 +21,8 @@ npm config set prefix "${HOME}/.npm-packages"
 Add the following to your `.bashrc`/`.zshrc`:
 
 ```sh
+export XDG_DATA_HOME=${HOME}/.local/share
+test -d "$XDG_DATA_HOME"   || mkdir --parents --mode=0700 "$XDG_DATA_HOME"
 NPM_PACKAGES="${XDG_DATA_HOME}/npm-packages"
 
 if ! [ -d "$NPM_PACKAGES" ] && command -v npm >/dev/null 2>&1; then
