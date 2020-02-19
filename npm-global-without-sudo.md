@@ -35,7 +35,7 @@ If you're using `fish`, add the following to `~/.config/fish/config.fish`:
 ```sh
 set NPM_PACKAGES "$HOME/.npm-packages"
 
-set PATH $NPM_PACKAGES/bin $PATH
+set PATH $PATH $NPM_PACKAGES/bin
 
 set MANPATH $NPM_PACKAGES/share/man $MANPATH  
 ```
