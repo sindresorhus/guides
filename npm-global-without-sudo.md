@@ -25,7 +25,7 @@ NPM_PACKAGES="${XDG_DATA_HOME:-"${HOME}"}/npm-packages"
 
 if ! [ -d "$NPM_PACKAGES" ]; then
 	npm config set prefix "$NPM_PACKAGES"
-	npm config set cache "${XDG_CACHE_HOME}/npm"
+	npm config set cache "${XDG_CACHE_HOME:-"$HOME"}/.npm"
 fi
 
 if [[ ":${PATH}:" != *":${NPM_PACKAGES}/bin:"* ]]; then
@@ -40,20 +40,12 @@ if [[ ":${MANPATH}:" != *":${NPM_PACKAGES}/share/man:"* ]]; then
 fi
 
 # From https://github.com/npm/npm/issues/6675#issuecomment-168053009
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/.npmrc"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-"$HOME"}/.npmrc"
 
 unset NPM_PACKAGES
 ```
 
-If you're using `fish`, add the following to `~/.config/fish/config.fish`:
-
-```sh
-set NPM_PACKAGES "$HOME/.npm-packages"
-
-set PATH $NPM_PACKAGES/bin $PATH
-
-set MANPATH $NPM_PACKAGES/share/man $MANPATH  
-```
+If you're using `fish`, replace in the above code snippet `export` by `set` and add it to `~/.config/fish/config.fish`.
 
 If you have erased your MANPATH by mistake, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
 
