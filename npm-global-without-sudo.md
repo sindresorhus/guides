@@ -45,7 +45,10 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-"$HOME"}/.npmrc"
 unset NPM_PACKAGES
 ```
 
-If you're using `fish`, replace in the above code snippet `export` by `set` and add it to `~/.config/fish/config.fish`.
+If you're using `fish`, then add the above snippet to `~/.config/fish/config.fish` after having
+
+- replaced the default variable fallbacks such as `NPM_PACKAGES="${XDG_DATA_HOME:-"${HOME}"}/npm-packages"` by `set NPM_PACKAGES "$XDG_DATA_HOME/npm-packages"; test -z "$XDG_DATA_HOME"; and set NPM_PACKAGES "$HOME/npm-packages"`, and
+- replaced  `export` by `set`.
 
 If you have erased your MANPATH by mistake, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
 
