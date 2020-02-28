@@ -4,24 +4,26 @@
 
 Here is a way to install packages globally for a given user.
 
-###### 1. Create a directory for global packages
+##### 1. Create a directory for global packages
 
 ```sh
 mkdir "${HOME}/.npm-packages"
 ```
 
-###### 2. Tell `npm` where to store globally installed packages
+##### 2. Tell `npm` where to store globally installed packages
 
 ```sh
 npm config set prefix "${HOME}/.npm-packages"
 ```
 
-###### 3. Ensure `npm` will find installed binaries and man pages
+##### 3. Ensure `npm` will find installed binaries and man pages
 
-Add the following to your `.bashrc`/`.zshrc`:
+###### 3.1 Bash / Zsh way
+
+Add the following to your `.bashrc`/`.zshrc`:  
 
 ```sh
-NPM_PACKAGES="${XDG_DATA_HOME:-"${HOME}"}/npm-packages"
+NPM_PACKAGES="${XDG_DATA_HOME:-"${HOME}"}/.npm-packages"
 
 if ! [ -d "$NPM_PACKAGES" ]; then
 	npm config set prefix "$NPM_PACKAGES"
@@ -44,13 +46,43 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-"$HOME"}/.npmrc"
 
 unset NPM_PACKAGES
 ```
+Then you can source it  
+`source ~/.bashrc`  
+`source ~/.zshrc`  
 
-If you're using `fish`, then add the above snippet to `~/.config/fish/config.fish` after having
+###### 3.2 Fish way
+Add the below snippet to `~/.config/fish/config.fish`: 
 
-- replaced the default variable fallbacks such as `NPM_PACKAGES="${XDG_DATA_HOME:-"${HOME}"}/npm-packages"` by `set NPM_PACKAGES "$XDG_DATA_HOME/npm-packages"; test -z "$XDG_DATA_HOME"; and set NPM_PACKAGES "$HOME/npm-packages"`, and
-- replaced  `export` by `set`.
+```sh
+# define NPM_PACKAGES path
+test -n "$XDG_DATA_HOME"; and set NPM_PACKAGES $XDG_DATA_HOME; or set NPM_PACKAGES $HOME
+set NPM_PACKAGES $NPM_PACKAGES"/.npm-packages"
 
-If you have erased your MANPATH by mistake, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
+# if $NPM_PACKAGES is well set up
+if ! [ -d "$NPM_PACKAGES" ]
+    npm config set prefix "$NPM_PACKAGES"
+	npm config set cache (test -n "$XDG_CACHE_HOME"; and echo $XDG_CACHE_HOME; or echo $HOME)"/.npm"
+end
+
+# append to PATH if not present
+if not contains "$NPM_PACKAGES/bin" $PATH
+    set -a PATH $NPM_PACKAGES/bin
+end
+
+[ -z "$MANPATH" ]; and set MANPATH (manpath -g)
+if not contains "$NPM_PACKAGES/share/main"
+    set -a MANPATH $NPM_PACKAGES/share/man
+end
+
+# From https://github.com/npm/npm/issues/6675#issuecomment-168053009
+test -n "$XDG_CONFIG_HOME"; and set NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME; or set NPM_CONFIG_USERCONFIG $HOME
+set NPM_CONFIG_USERCONFIG $NPM_CONFIG_USERCONFIG"/.npmrc"
+```
+
+Source your config  
+`. ~/.config/fish/config.fish`
+
+If you have erased your MANPATH by mistake on Fish, you can restore it by running `set -Ux MANPATH (manpath -g) $MANPATH` once. Do not put this command in your `config.fish`.
 
 ---
 
