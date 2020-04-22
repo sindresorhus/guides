@@ -25,3 +25,7 @@ If you are on Ubuntu 14.04-15.10, use `docker.io` instead:
 ```console
 $ sudo service docker.io restart
 ```
+
+##### 4. Log out and log back in
+
+This last step is necessary in order to re-evaluate group membership. 
