@@ -13,7 +13,8 @@ Optionally change the username to match your preferred user.
 ```console
 $ sudo gpasswd -a $USER docker
 ```
-It is does not works, try this
+
+If is does not work, try this:
 
 ```console
 sudo setfacl -m user:$USER:rw /var/run/docker.sock
@@ -31,5 +32,4 @@ If you are on Ubuntu 14.04-15.10, use `docker.io` instead:
 ```console
 $ sudo service docker.io restart
 ```
-
 
