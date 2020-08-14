@@ -19,7 +19,8 @@ If is does not work, try this:
 ```console
 sudo setfacl -m user:$USER:rw /var/run/docker.sock
 ```
-replace `$USER` with your home username
+
+(replace `$USER` with the desired username)
 
 ##### 3. Restart the `docker` daemon
 
@@ -32,4 +33,3 @@ If you are on Ubuntu 14.04-15.10, use `docker.io` instead:
 ```console
 $ sudo service docker.io restart
 ```
-
