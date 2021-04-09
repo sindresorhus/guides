@@ -14,6 +14,8 @@ Optionally change the username to match your preferred user.
 $ sudo gpasswd -a $USER docker
 ```
 
+**IMPORTANT**: Log out and log back in so that your group membership is re-evaluated.
+
 ##### 3. Restart the `docker` daemon
 
 ```console
