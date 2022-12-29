@@ -56,5 +56,9 @@ source ~/.bashrc
 
 ---
 
+NOTE2: If you are using the various versions of `nvm` (Node Version Manager) for switching Node releases, most (if not all) of these libraries avoid this issue by default as they install Node and global packages in their own folders. For example https://github.com/jorgebucaran/nvm.fish doesn't need `sudo` when using `npm i -g <package>` and it can also automatically preinstall global packages for each Node version using `set --universal nvm_default_packages package1 package2 ...`.
+
+---
+
 See also: `npm`'s documentation on
 ["Fixing `npm` permissions"](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
